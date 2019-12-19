@@ -1,27 +1,20 @@
 import Vue from 'vue';
-import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
+import Router from 'vue-router';
+import routes from 'vue-auto-routing';
+import { createRouterLayout } from 'vue-router-layout';
 
-Vue.use(VueRouter);
+Vue.use(Router);
 
-const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: Home,
-  },
-  {
-    path: '/about',
-    name: 'about',
-    component: () =>
-      import(/* webpackChunkName: "about" */ '../views/About.vue'),
-  },
-];
-
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes,
+const RouterLayout = createRouterLayout(layout => {
+  return import('@/layouts/' + layout + '.vue');
 });
 
-export default router;
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      component: RouterLayout,
+      children: routes,
+    },
+  ],
+});
