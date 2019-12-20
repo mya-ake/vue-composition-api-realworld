@@ -3,7 +3,6 @@ to: src/components/<%= category %>/<%= name %>/<%= name %>.spec.ts
 ---
 import { shallowMount, Wrapper } from '@vue/test-utils';
 import <%= name %> from './<%= name %>.vue';
-import { CombinedVueInstance } from 'vue/types/vue';
 
 describe('components/contents/<%= name %>', () => {
   describe('mountable', () => {
