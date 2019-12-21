@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/base/BaseErrorMessageList mountable snapshot 1`] = `
+<ul
+  class="error-messages"
+>
+  <li>
+    error message
+  </li>
+</ul>
+`;
