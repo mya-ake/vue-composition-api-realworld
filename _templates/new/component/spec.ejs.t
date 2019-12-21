@@ -4,7 +4,7 @@ to: src/components/<%= category %>/<%= name %>/<%= name %>.spec.ts
 import { shallowMount, Wrapper } from '@vue/test-utils';
 import <%= name %> from './<%= name %>.vue';
 
-describe('components/contents/<%= name %>', () => {
+describe('components/<%= category %>/<%= name %>', () => {
   describe('mountable', () => {
     let wrapper: Wrapper<Vue>;
 

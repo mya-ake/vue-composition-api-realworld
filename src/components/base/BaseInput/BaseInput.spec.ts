@@ -1,7 +1,7 @@
 import { shallowMount, Wrapper } from '@vue/test-utils';
 import BaseInput from './BaseInput.vue';
 
-describe('components/contents/BaseInput', () => {
+describe('components/base/BaseInput', () => {
   describe('mountable', () => {
     let wrapper: Wrapper<Vue>;
 

@@ -1,7 +1,7 @@
 import { shallowMount, Wrapper } from '@vue/test-utils';
 import BaseLink from './BaseLink.vue';
 
-describe('components/contents/BaseLink', () => {
+describe('components/base/BaseLink', () => {
   describe('mountable', () => {
     let wrapper: Wrapper<Vue>;
 
