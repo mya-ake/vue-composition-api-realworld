@@ -6,6 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
+    "test:unit:ci": "vue-cli-service test:unit --ci",
     "lint": "vue-cli-service lint",
     "gen:c": "hygen new component",
     "preserve": "run-s lint"
@@ -49,6 +50,7 @@
   "lint-staged": {
     "*.{ts,js,vue}": [
       "yarn lint",
+      "yarn test:unit:ci",
       "git add"
     ]
   }
