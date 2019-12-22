@@ -1,36 +1,11 @@
-import { createComponent, reactive, computed } from '@vue/composition-api';
-import { BaseButtonType } from './BaseButton.type';
-
-export const useButton = (clickFunc: BaseButtonType.Props['onClick']) => {
-  const localState = reactive({ processing: false });
-  const disabled = computed(() => localState.processing);
-
-  const onClick = async (event: Event) => {
-    localState.processing = true;
-    await clickFunc(event);
-    localState.processing = false;
-  };
-
-  return {
-    disabled,
-    onClick,
-  };
-};
+import { createComponent } from '@vue/composition-api';
 
 export default createComponent({
   props: {
-    type: {
-      default: 'button',
-    },
-    onClick: {
-      default: () => {},
-    },
+    type: { default: 'button' },
+    disabled: { default: false },
   },
-  setup(props: BaseButtonType.Props) {
-    const { disabled, onClick } = useButton(props.onClick);
-    return {
-      disabled,
-      clickListener: onClick,
-    };
+  setup(_, { listeners }) {
+    return { listeners: { ...listeners } };
   },
 });

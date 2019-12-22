@@ -1,5 +1,5 @@
 <template>
-  <button class="btn" :type="type" :disabled="disabled" @click="clickListener">
+  <button class="btn" :type="type" :disabled="disabled" v-on="listeners">
     <slot />
   </button>
 </template>
