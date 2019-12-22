@@ -18,4 +18,17 @@ describe('compositions/form', () => {
       expect(model.value).toBe('test');
     });
   });
+
+  describe('useSubmit', () => {
+    const { useSubmit } = form;
+
+    it('', () => {
+      const submitListener = jest
+        .fn()
+        .mockReturnValue(new Promise(resolve => resolve()));
+      const { disabled, onSubmit } = useSubmit(submitListener);
+      onSubmit({} as any);
+      expect(disabled.value).toBe(true);
+    });
+  });
 });

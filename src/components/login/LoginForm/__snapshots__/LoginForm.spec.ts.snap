@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/login/LoginForm mountable snapshot 1`] = `
+<form>
+  <fieldset
+    class="form-group"
+  >
+    <baseinput-stub
+      class="form-control-lg"
+      placeholder="Email"
+      type="email"
+      value=""
+    />
+  </fieldset>
+   
+  <fieldset
+    class="form-group"
+  >
+    <baseinput-stub
+      class="form-control-lg"
+      placeholder="Password"
+      type="password"
+      value=""
+    />
+  </fieldset>
+   
+  <basebutton-stub
+    class="btn-lg btn-primary pull-xs-right"
+    type="submit"
+  >
+    
+    Sign in
+  
+  </basebutton-stub>
+</form>
+`;

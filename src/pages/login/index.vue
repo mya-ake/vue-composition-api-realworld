@@ -5,34 +5,28 @@
         <div class="col-md-6 offset-md-3 col-xs-12">
           <h1 class="text-xs-center">Sign in</h1>
           <p class="text-xs-center">
-            <a href="">Need an account?</a>
+            <BaseLink to="/register">Need an account?</BaseLink>
           </p>
 
-          <ul class="error-messages">
-            <li>email or password is invalid</li>
-          </ul>
-
-          <form>
-            <fieldset class="form-group">
-              <input
-                class="form-control form-control-lg"
-                type="text"
-                placeholder="Email"
-              />
-            </fieldset>
-            <fieldset class="form-group">
-              <input
-                class="form-control form-control-lg"
-                type="password"
-                placeholder="Password"
-              />
-            </fieldset>
-            <button class="btn btn-lg btn-primary pull-xs-right">
-              Sign in
-            </button>
-          </form>
+          <LoginContainer />
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script lang="ts">
+import { createComponent } from '@vue/composition-api';
+import { BaseLink } from '@/components/base';
+import { LoginContainer } from '@/components/login';
+
+export default createComponent({
+  components: {
+    BaseLink,
+    LoginContainer,
+  },
+  setup() {
+    return {};
+  },
+});
+</script>

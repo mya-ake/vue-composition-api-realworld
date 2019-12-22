@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/login/LoginContainer mountable snapshot 1`] = `
+<div>
+  <baseerrormessagelist-stub
+    messages=""
+  />
+   
+  <loginform-stub />
+</div>
+`;
