@@ -1,6 +1,6 @@
 <template>
   <div>
-    <BaseErrorMessageList :messages="state.messages" />
+    <BaseErrorMessageList :errors="state.errors" />
     <LoginForm @submit="onSubmit" />
   </div>
 </template>

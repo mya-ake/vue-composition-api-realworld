@@ -3,7 +3,7 @@
 exports[`components/login/LoginContainer mountable snapshot 1`] = `
 <div>
   <baseerrormessagelist-stub
-    messages=""
+    errors=""
   />
    
   <loginform-stub />

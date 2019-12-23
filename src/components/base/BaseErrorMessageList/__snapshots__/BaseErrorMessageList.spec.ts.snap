@@ -5,7 +5,9 @@ exports[`components/base/BaseErrorMessageList mountable snapshot 1`] = `
   class="error-messages"
 >
   <li>
+    
     error message
+  
   </li>
 </ul>
 `;

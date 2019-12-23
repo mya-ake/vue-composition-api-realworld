@@ -7,7 +7,7 @@ describe('components/base/BaseErrorMessageList', () => {
 
     beforeEach(() => {
       wrapper = shallowMount(BaseErrorMessageList, {
-        propsData: { messages: ['error message'] },
+        propsData: { errors: [{ code: 'test', message: 'error message' }] },
       });
     });
 
